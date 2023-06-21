@@ -1,5 +1,11 @@
 * {
     box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --primary-bg: #10375c;
+    --primary-color-1: #2e80ce;
 }
 
 html {
@@ -9,4 +15,65 @@ html {
 body {
     font-size: 1.6rem;
     font-family: "Sora", sans-serif;
+}
+
+/* common */
+.container {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin: 0 auto;
+}
+
+/* header */
+.header {
+    background: var(--primary-bg);
+    min-height: 100vh;
+    padding: 30px;
+}
+
+/* logo */
+.logo {
+    position: relative;
+    display: inline-flex;
+    font-size: 1rem;
+}
+
+.logo__circle::before,
+.logo__circle::after {
+    border-radius: 50%;
+    content: "";
+    display: inline-block;
+}
+
+.logo__circle::before {
+    width: 3rem;
+    height: 3rem;
+    background: var(--primary-color-1);
+}
+
+.logo__circle::after {
+    position: absolute;
+    top: 1.1rem;
+    left: 1.1rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: #fff;
+}
+
+.logo__text {
+    margin-left: 0.6rem;
+    text-align: right;
+    line-height: 1.6rem;
+}
+
+.logo__brand {
+    display: block;
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: #ffffff;
+}
+
+.logo__brand--small {
+    font-weight: 300;
+    font-size: 1.2rem;
 }
