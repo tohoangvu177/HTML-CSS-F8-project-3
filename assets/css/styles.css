@@ -24,11 +24,44 @@ body {
     margin: 0 auto;
 }
 
+.btn {
+    border: none;
+    display: inline-block;
+    min-width: var(--width, 205px);
+    height: var(--height, 60px);
+    background-color: #2e80ce;
+    border-radius: 999px;
+
+    font-weight: 400;
+    font-size: var(--font-size, 1.6rem);
+    line-height: var(--line-height, 1.67);
+    text-align: center;
+    color: #ffffff;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
 /* header */
 .header {
     background: var(--primary-bg);
     min-height: 100vh;
-    padding: 30px;
+    padding-top: 20px;
+}
+
+.header-fixed {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
 }
 
 /* logo */
@@ -76,4 +109,52 @@ body {
 .logo__brand--small {
     font-weight: 300;
     font-size: 1.2rem;
+}
+
+/* navbar */
+.navbar {
+}
+
+.navbar__list {
+    display: flex;
+}
+
+.navbar__item {
+}
+
+.navbar__link,
+.action__login {
+    padding: 8px 21px;
+    font-weight: 300;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    color: #c9d2da;
+}
+
+.navbar__link--active,
+.navbar__link:hover {
+    color: #fff;
+    text-shadow: 1px 0 0 currentColor;
+}
+
+.navbar__link--active::before {
+    content: "";
+    display: inline-block;
+    position: relative;
+    left: -8px;
+    top: -2px;
+    width: 6px;
+    height: 6px;
+    background: #ffffff;
+    border-radius: 50%;
+}
+
+/* action */
+.action_signup {
+    margin-left: 7px;
+    --width: 104px;
+    --height: 44px;
+
+    --font-size: 16px;
+    --line-height: 28px;
 }
