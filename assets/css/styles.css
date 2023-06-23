@@ -44,6 +44,23 @@ body {
     cursor: pointer;
 }
 
+.section-heading {
+    color: var(--primary-bg);
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 6rem;
+    letter-spacing: -0.1rem;
+}
+
+.section-desc {
+    margin-top: 18px;
+    color: #575f66;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 3rem;
+}
+
 /* header-top*/
 .header {
     background: var(--primary-bg);
@@ -231,4 +248,95 @@ body {
 .hero__img:last-child {
     width: 210px;
     height: 410px;
+}
+
+/* services */
+.services {
+    margin: 170px 0;
+    background: #fff;
+}
+
+.services__heading {
+    text-align: center;
+}
+
+.services__desc {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 468px;
+}
+
+.services__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.services__img {
+    width: 570px;
+    height: 570px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* services item */
+.services-item {
+    display: flex;
+    width: 470px;
+    height: 128px;
+    padding: 21px;
+    border-radius: 10px;
+    background: #fff;
+    transition: 0.25s;
+}
+
+.services-item__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #eff6fd;
+    color: var(--primary-bg);
+    transition: 0.25s;
+}
+
+/* @@ hover */
+.services-item:hover,
+.services-item-active {
+    box-shadow: 0px 14px 28px 0px rgba(0, 0, 0, 0.05);
+    position: relative;
+    cursor: pointer;
+}
+.services-item:hover .services-item__img,
+.services-item-active .services-item__img {
+    background: var(--primary-color-1);
+    color: #fff;
+}
+/* hover @@  */
+
+.services-item__body {
+    margin-left: 19px;
+}
+
+.services-item__body--heading {
+    color: var(--primary-bg);
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.services-item__body--desc {
+    margin-top: 8px;
+    width: 308px;
+    color: #575f66;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 2.8rem;
+}
+
+.services-action {
+    margin-top: 75px;
 }
