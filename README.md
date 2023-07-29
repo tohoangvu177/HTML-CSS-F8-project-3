@@ -2,4 +2,5 @@
 
 ## Description
 
-Only use HTML CSS
+Only use HTML/CSS
+Landing page "Shine Smile" for Dental care
