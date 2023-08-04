@@ -46,6 +46,7 @@ body {
     opacity: 0.8;
     cursor: pointer;
     color: #000;
+    transform: scale(1.05);
 }
 
 .section-heading {
@@ -307,11 +308,12 @@ body {
 }
 
 /* @@ hover */
-.services-item:hover,
-.services-item-active {
+.services-item:hover {
+    /* .services-item-active { */
     box-shadow: 0px 14px 28px 0px rgba(0, 0, 0, 0.05);
     position: relative;
     cursor: pointer;
+    transform: scale(1.1);
 }
 .services-item:hover .services-item__img,
 .services-item-active .services-item__img {
@@ -408,7 +410,7 @@ body {
 
 /* feature */
 .feature {
-    margin: 170px 0;
+    margin: 170px 0 85px;
 }
 
 .feature__row {
@@ -444,4 +446,97 @@ body {
 .feature__desc {
     margin-bottom: 38px;
     text-align: left;
+}
+
+/* member */
+.member {
+    padding: 85px;
+}
+
+.member__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.member__cta {
+    margin-top: 38px;
+}
+
+.member__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 70px;
+    column-gap: 30px;
+}
+
+.member-item {
+    text-align: center;
+}
+
+.member-item:hover .member-item__img-bg {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.member-item__img-bg {
+    display: flex;
+    justify-content: center;
+    padding-top: 28px;
+    background: #eaf6ff;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: 0.25s;
+}
+
+.member-item__thumb {
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.member-item__name {
+    margin-top: 12px;
+    color: #10375c;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.75;
+}
+
+.member-item__title {
+    color: #575f66;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.85;
+}
+
+.member__control {
+    display: flex;
+    justify-content: center;
+    margin-top: 38px;
+    column-gap: 18px;
+}
+
+.member__control-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #575f66;
+    border-radius: 50%;
+    background: #fff;
+    outline: none;
+    transition: 0.5s;
+}
+
+.member__control-btn:hover {
+    background-color: #2e80ce;
+    border-color: #2e80ce;
+    color: #fff;
+    cursor: pointer;
+}
+
+.member__control-btn-next {
+    rotate: 180deg;
 }
