@@ -665,6 +665,7 @@ body {
 }
 
 .news__item:hover {
+    border-color: #fff;
     box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.05);
 }
 
@@ -672,13 +673,22 @@ body {
     margin: 0 22px 0 22px;
 }
 
-.news__thumb {
+.news__item-thumb {
+    overflow: hidden;
+    height: 172px;
+}
+
+.news__item-img {
     display: block;
     width: 270px;
-    height: 172px;
-    /* border-radius: 12px 12px 0px 0px; */
+    height: 100%;
     flex-shrink: 0;
     object-fit: cover;
+    transition: 0.25s;
+}
+
+.news__item:hover .news__item-img {
+    transform: scale(1.1);
 }
 
 .news__item-heading {
@@ -709,4 +719,40 @@ body {
 .news__item-more:hover {
     text-shadow: 0 0 1px currentColor;
     text-decoration: underline;
+}
+
+/* appointment */
+.appointment {
+    margin-bottom: 170px;
+}
+
+.appointment__inner {
+    padding: 100px 24px;
+    background: #f6fbff;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.appointment__heading {
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.appointment__heading::after {
+    position: absolute;
+    display: block;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 136px;
+    height: 2px;
+    margin: 0 auto;
+    background: #2e80ce;
+}
+
+.appointment__desc {
+    max-width: 617px;
+    margin: 18px auto 38px;
+    font-size: 1.6rem;
 }
