@@ -16,6 +16,15 @@ html {
 body {
     font-size: 1.6rem;
     font-family: "Sora", sans-serif;
+    scroll-behavior: smooth;
+}
+
+input,
+textarea,
+select,
+button {
+    font-family: inherit;
+    font-size: inherit;
 }
 
 /* common=========================================== */
@@ -121,6 +130,7 @@ body {
     position: relative;
     display: inline-flex;
     font-size: 1rem;
+    font-family: "Sora", sans-serif;
 }
 
 .logo__circle::before,
@@ -755,4 +765,120 @@ body {
     max-width: 617px;
     margin: 18px auto 38px;
     font-size: 1.6rem;
+}
+
+/* footer */
+.footer {
+    padding: 100px 0 42px;
+    background: #10375c;
+    font-family: "Open Sans", sans-serif;
+}
+
+.footer__row {
+    display: grid;
+    grid-template-columns: 1fr 0.4fr 0.4fr 1fr;
+    column-gap: 78px;
+}
+
+.footer__heading {
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.75;
+}
+
+.footer__column-desc {
+    margin-top: 20px;
+    width: 100%;
+    color: #a9b3bb;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+.footer__item {
+    margin-bottom: 10px;
+}
+
+.footer__item:last-child {
+    margin-bottom: 28px;
+}
+
+.footer__link {
+    color: #a9b3bb;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.85;
+    white-space: nowrap;
+    transition: 0.25s;
+}
+
+.footer__link:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.footer__social {
+    display: flex;
+    margin-bottom: 28px;
+    column-gap: 10px;
+}
+
+.footer__social-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 32px;
+    background: #fff;
+    color: #2e80ce;
+    transition: 0.25s;
+}
+
+.footer__social-link:hover {
+    background: #2e80ce;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.footer__form {
+    display: flex;
+    margin-top: 10px;
+    column-gap: 12px;
+}
+
+.footer__form-input {
+    width: 212px;
+    height: 46px;
+    background: transparent;
+    border-radius: 4px;
+    border: 1px solid #406181;
+    color: #fff;
+    transition: 0.25s;
+}
+
+.footer__form-input::placeholder {
+    color: #9ca8b1;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.85;
+}
+
+.footer__form-input:hover {
+    transform: scale(1.1);
+}
+
+.footer__form-submit {
+    --width: 108px;
+    --height: 46px;
+    --font-size: 1.4rem;
+    --line-height: 1.85;
+
+    display: inline-block;
+    border-radius: 4px;
+    background: #2e80ce;
+
+    font-weight: 600;
 }
