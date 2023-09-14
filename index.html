@@ -17,6 +17,7 @@
         <!-- <link rel="stylesheet" href="./assets/fonts/stylesheet.css" /> -->
         <link rel="stylesheet" href="./assets/css/reset.css" />
         <link rel="stylesheet" href="./assets/css/styles.css" />
+        <link rel="stylesheet" href="./assets/css/responsive.css" />
 
         <!-- Link Favicon -->
         <link
@@ -97,10 +98,27 @@
         <meta name="theme-color" content="#ffffff" />
     </head>
     <body>
-        <!-- header-fixed -->
+        <!-- PC - header-fixed -->
         <header class="header-fixed">
             <div class="container">
                 <div class="header-top header">
+                    <!-- Tablet/Mobile menu button -->
+                    <label
+                        for="menu-checkbox"
+                        class="toggle-menu show-on-moblie"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="1em"
+                            viewBox="0 0 448 512"
+                        >
+                            <path
+                                fill="currentColor"
+                                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                            />
+                        </svg>
+                    </label>
+
                     <!-- logo -->
                     <a href="/">
                         <div class="logo">
@@ -116,13 +134,9 @@
 
                     <!-- Navbar -->
                     <div class="navbar">
-                        <div class="navbar__list">
+                        <div class="navbar__list pc-nav">
                             <div class="navbar__item">
-                                <a
-                                    href="#Home"
-                                    class="navbar__link navbar__link--active"
-                                    >Home
-                                </a>
+                                <a href="#Home" class="navbar__link">Home </a>
                             </div>
                             <div class="navbar__item">
                                 <a href="#Services" class="navbar__link"
@@ -137,11 +151,25 @@
                                     >Doctors
                                 </a>
                             </div>
+
+                            <div class="show-on-moblie speparate">
+                                <div class="navbar__item">
+                                    <a href="#!" class="navbar__link"
+                                        >Log in
+                                    </a>
+                                </div>
+
+                                <div class="navbar__item">
+                                    <a href="#!" class="navbar__link"
+                                        >Sign up
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Action -->
-                    <div class="header-action">
+                    <div class="header-action hide-on-mobile">
                         <a href="#!" class="navbar__link">Log in</a>
                         <button href="#!" class="btn header-action_signup">
                             Sign up
@@ -150,48 +178,89 @@
                 </div>
             </div>
         </header>
-        <!-- header-hero -->
-        <header id="Home" class="header-bottom header">
-            <div class="container">
-                <div class="hero">
-                    <!-- hero content -->
-                    <section class="hero__content">
-                        <h1 class="hero__heading">
-                            Exceptional dental care for all ages.
-                        </h1>
-                        <p class="hero__desc">
-                            Exceptional dental care for all ages. Your great
-                            smile begins with a great dentist.
-                        </p>
-                        <div class="hero__row">
-                            <a href="#!" class="btn">Book Online</a>
-                            <span class="hero__phone">
-                                or call (123) 456-7890
-                            </span>
-                        </div>
-                    </section>
 
-                    <!-- hero media -->
-                    <div class="hero__media">
-                        <figure class="hero__images">
-                            <img
-                                src="./assets/img/hero-1.jpg"
-                                alt=""
-                                class="hero__img"
-                            />
-                            <img
-                                src="./assets/img/hero-2.jpg"
-                                alt=""
-                                class="hero__img"
-                            />
-                        </figure>
+        <!-- Tablet/Mobile header -->
+        <header class="mobile-header show-on-moblie">
+            <input
+                type="checkbox"
+                name=""
+                id="menu-checkbox"
+                class="menu-checkbox"
+                hidden
+            />
+
+            <!-- overlay -->
+            <label for="menu-checkbox" class="menu-overlay"></label>
+
+            <!-- Menu content -->
+            <label for="menu-checkbox" class="menu-drawer">
+                <!-- logo -->
+                <a href="/">
+                    <div class="logo">
+                        <span class="logo__circle"></span>
+                        <span class="logo__text">
+                            <span class="logo__brand">shine</span>
+                            <span class="logo__brand logo__brand--small"
+                                >smile
+                            </span>
+                        </span>
                     </div>
+                </a>
+
+                <!-- Navigation -->
+                <div class="mobile-nav">
+                    <script>
+                        const pcNav = document.querySelector(".pc-nav");
+                        const mobileNav = document.querySelector(".mobile-nav");
+
+                        mobileNav.innerHTML = pcNav.innerHTML;
+                    </script>
                 </div>
-            </div>
+            </label>
         </header>
 
         <!-- main -->
         <main>
+            <!-- Hero -->
+            <section id="Home" class="hero">
+                <div class="container">
+                    <div class="hero-inner">
+                        <!-- hero content -->
+                        <section class="hero__content">
+                            <h1 class="hero__heading">
+                                Exceptional dental care for all ages.
+                            </h1>
+                            <p class="hero__desc">
+                                Exceptional dental care for all ages. Your great
+                                smile begins with a great dentist.
+                            </p>
+                            <div class="hero__row">
+                                <a href="#!" class="btn">Book Online</a>
+                                <span class="hero__phone">
+                                    or call (123) 456-7890
+                                </span>
+                            </div>
+                        </section>
+
+                        <!-- hero media -->
+                        <div class="hero__media hide-on-mobile">
+                            <figure class="hero__images">
+                                <img
+                                    src="./assets/img/hero-1.jpg"
+                                    alt=""
+                                    class="hero__img"
+                                />
+                                <img
+                                    src="./assets/img/hero-2.jpg"
+                                    alt=""
+                                    class="hero__img"
+                                />
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- services -->
             <section id="Services" class="services">
                 <div class="container">
@@ -207,7 +276,7 @@
                             <img
                                 src="./assets/img/services-1.png"
                                 alt="Our services"
-                                class="services__img"
+                                class="services__img hide-on-mobile"
                             />
                         </figure>
                         <div class="services__list">
